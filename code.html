@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeXpress - Online IDE</title>
+  <link rel="stylesheet" href="code.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <h1>codeXorbit</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="home.html#about">About</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="course.html">Course</a></li>
+      <li><a href="news.html">News</a></li>
+      <div class="mode-toggle">
+        <button id="toggleMode">Switch to Light Mode</button>
+      </div>
+    </ul>
+  </nav>
+
+ 
+
+  <main>
+    <div class="controls">
+      <select id="languageSelect">
+        <option value="c">C</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+      </select>
+      <button id="runBtn">Run Code</button>
+      <button id="downloadBtn">Download PDF</button>
+      <button id="newProjectBtn">New Project</button>
+      <button id="saveProjectBtn">Save Project</button>
+      <button id="loadProjectBtn">Load Project</button>
+    </div>
+
+    <div class="editor-container">
+      <textarea id="editor"></textarea>
+    </div>
+
+    <div class="output">
+      <h2>Output:</h2>
+      <pre id="outputArea"></pre>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/c/c.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/python/python.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/javascript/javascript.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/clike/clike.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <script src="code.js"></script>
+</body>
+</html>

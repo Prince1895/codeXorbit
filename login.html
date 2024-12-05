@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Code Editor</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <a href="#">CodeXorbit</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="home.html#about">About</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="course.html">Course</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
+  <div class="login-page">
+    <div class="login-container">
+      <h1>Welcome Back</h1>
+      <p>Log in to continue coding!</p>
+      <form>
+        <input type="text" placeholder="Email" required>
+        <div class="password">
+          <input type="password" id="password" placeholder="Password" required>
+          <label>
+            <input type="checkbox" id="showPassword"> Show Password
+          </label>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      
+      <div class="linr">or</div>
+      <button class="btn google-login">
+        <img src="image.png" alt="Google Logo">
+        Login with Google
+      </button>
+      
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+  <script>
+    const showPasswordCheckbox = document.getElementById('showPassword');
+    const passwordInput = document.getElementById('password');
+    
+    showPasswordCheckbox.addEventListener('change', () => {
+      if (showPasswordCheckbox.checked) {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    });
+  </script>
+</body>
+</html>
